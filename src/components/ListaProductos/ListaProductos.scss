@@ -1,0 +1,27 @@
+.lista-productos{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 15px;
+}
+.Card{
+    border: 1px solid rgba(219,210,219,1);
+    box-shadow: 7px 7px 5px 0px rgba(219,210,219,1);
+    width: 100%;
+    cursor: pointer;
+    
+    .Card-box{
+        margin: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .Info-name{
+            width: 25%;
+        }
+        .Info-value{
+            width: 30%;
+        }
+        .Info-description{
+            width: 45%;
+        }
+    }
+}

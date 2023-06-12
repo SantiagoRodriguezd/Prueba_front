@@ -1,0 +1,28 @@
+.container-home{
+    
+    .header{
+        padding: 1%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #e2e2e2;
+        .btn{
+            width: 150px;
+            height: 30px;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            font-size: medium;
+            cursor: pointer;
+            &:hover {
+            background-color: #ccc;
+          }
+        }
+        .user{
+            display: flex;
+        }
+    }
+}
+.box-productos{
+    padding: 2%;
+}

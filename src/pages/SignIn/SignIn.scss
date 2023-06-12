@@ -1,0 +1,54 @@
+
+.background-signin{
+
+    background: #e2e2e2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    .box-form{
+        width: 30%;
+        border-radius: 5px;
+        
+        .form{
+            padding: 5%;            
+            background: #ffffff;
+
+            h1{
+                text-align: center;
+            }
+            h2{
+                margin: 5% 0 10px 0;
+            }
+            p{
+                margin: 10px 0 20px 0;
+            }
+            .input-signin{
+                height: 30px;
+                width: 100%;
+                margin: 5px 0 5px 0;
+                border: #e2e2e2 1px solid;
+                border-radius: 5px;
+            }
+            
+            .btn-submit{
+                width: 100%;
+                height: 30px;
+                margin: 10px 0 5px 0;
+                border: none;
+                border-radius: 5px;
+                font-weight: 550;
+                cursor: pointer;
+                &:hover{
+                    background: #e7e6dd;
+                }
+            }
+            .a-registrarme{
+                display: flex;
+                justify-content: center;
+                font-size: 14px;
+                text-decoration: none;
+            }
+        }
+    }
+}
