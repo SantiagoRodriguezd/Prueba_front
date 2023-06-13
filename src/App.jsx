@@ -49,8 +49,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="signin" element={<SignIn onLogin={handleLogin} />} />
-        <Route path="signup" element={<SignUp />} />
+        <Route path="/" element={<SignIn onLogin={handleLogin} />} />
+        <Route path="/signup" element={<SignUp />} />
         {userRoles && userRoles.includes("Administrador") && (
           <Route path="/" element={<PrivateOutlet />}>
             <Route path="home" element={<Home onLogout={handleLogout} />} />

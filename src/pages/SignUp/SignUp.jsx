@@ -65,7 +65,7 @@ function Register() {
                 <button className="btn-submit" type="submit">
                   Registrarse
                 </button>
-                <a href="/signup" className="a-registrarme">
+                <a href="/" className="a-registrarme">
                   Ya tengo cuenta, iniciar sesión
                 </a>
               </div>

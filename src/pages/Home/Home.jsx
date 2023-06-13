@@ -24,7 +24,7 @@ export default function Home({ onLogout }) {
   const handleLogout = () => {
     sessionStorage.clear();
     onLogout();
-    navigate("/signin");
+    navigate("/");
   };
 
   return (
