@@ -25,7 +25,6 @@ function ListaProductos() {
     getProductById(id)
       .then((response) => {
         const producto = response.data;
-        console.log(producto);
         if (producto) {
           Swal.fire({
             title: "Información del producto",

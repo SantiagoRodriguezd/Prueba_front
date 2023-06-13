@@ -19,7 +19,7 @@ export default function Shop({ onLogout }) {
   const handleLogout = () => {
     sessionStorage.clear();
     onLogout();
-    navigate("/signin");
+    navigate("/");
   };
 
   const searchProductoByDocumento = () => {
@@ -53,7 +53,6 @@ export default function Shop({ onLogout }) {
     getProductos()
       .then((data) => {
         setProductos(data);
-        console.log(data);
       })
       .catch((error) => {
         console.error(error);
