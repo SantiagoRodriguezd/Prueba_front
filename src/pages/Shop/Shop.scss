@@ -1,0 +1,112 @@
+.container-home{
+    
+    .header{
+        padding: 1%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #e2e2e2;
+        
+        .user{
+            display: flex;
+            p{
+                margin-right: 15px;
+            }
+            .btn-user{
+                
+                width: 100px;
+                height: 30px;
+                border: none;
+                border-radius: 5px;
+                margin: 5px;
+                font-size: medium;
+                cursor: pointer;
+                &:hover {
+                background-color: #ccc;
+            }
+            }
+        }
+    }
+}
+
+
+
+.box-productos-user {
+  display: flex;
+  width: 100%;
+  padding-top: 20px;
+  .btn{
+            width: 150px;
+            height: 30px;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            font-size: medium;
+            cursor: pointer;
+            &:hover {
+            background-color: #ccc;
+          }
+        }
+        .search{
+            width: 150px;
+            height: 30px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+  .lista-productos {
+
+    .productos-busqueda{
+      display: flex;
+      justify-content: space-between;
+    }
+    width: 64%;
+    padding-right: 20px;
+    padding-left: 25px;
+    
+
+    h2 {
+      
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .producto {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  .productos-seleccionados {
+    width: 30%;
+
+    h2 {    
+      font-weight: bold;
+      margin-bottom: 24px;
+    }
+
+    .producto-seleccionado {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 10px;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .total {
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  }
+}

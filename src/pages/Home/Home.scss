@@ -18,8 +18,31 @@
             background-color: #ccc;
           }
         }
+        .search{
+            width: 150px;
+            height: 30px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 5px;
+        }
         .user{
             display: flex;
+            p{
+                margin-right: 15px;
+            }
+            .btn-user{
+                
+                width: 100px;
+                height: 30px;
+                border: none;
+                border-radius: 5px;
+                margin: 5px;
+                font-size: medium;
+                cursor: pointer;
+                &:hover {
+                background-color: #ccc;
+            }
+            }
         }
     }
 }

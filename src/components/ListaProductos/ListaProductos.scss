@@ -1,7 +1,62 @@
+.title-productos{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1%;
+
+  .btn-crear{
+    margin-right: 3%;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #ddd;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ccc;
+    }
+  }
+
+    .search{
+      width: 150px;
+      height: 30px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin: 5px;
+        }
+
+   .btn{
+      width: 150px;
+      height: 30px;
+      border: none;
+      border-radius: 5px;
+      margin: 5px;
+      font-size: medium;
+      cursor: pointer;
+      &:hover {
+      background-color: #ccc;
+      }
+      }
+}
+.custom-select {
+  padding: 0.5rem 0.75rem;
+  margin-top: 20px;
+  width: 260px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
 .lista-productos{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 15px;
+
 }
 .Card{
     border: 1px solid rgba(219,210,219,1);
@@ -23,5 +78,21 @@
         .Info-description{
             width: 45%;
         }
+          .Info-actions {
+        button {
+          margin-left: 10px;
+          padding: 5px 10px;
+          border: none;
+          border-radius: 3px;
+          background-color: #ddd;
+          color: #333;
+          font-size: 14px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #ccc;
+          }
+        }
+      }
     }
 }

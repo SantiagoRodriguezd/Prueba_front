@@ -1,4 +1,3 @@
-// clienteReducer.js
 const initialState = {
   clientes: [],
   loading: false,
@@ -26,10 +25,12 @@ const clienteReducer = (state = initialState, action) => {
       return {
         ...state,
         clientes: state.clientes.map((cliente) =>
-          cliente.id === action.payload.id ? action.payload : cliente
+          cliente.documento === action.payload.documento
+            ? action.payload
+            : cliente
         ),
-        loading: false,
       };
+
     case "CREAR_CLIENTE_SUCCESS":
       return {
         ...state,
@@ -40,10 +41,11 @@ const clienteReducer = (state = initialState, action) => {
       return {
         ...state,
         clientes: state.clientes.filter(
-          (cliente) => cliente.id !== action.payload
+          (cliente) => cliente.documento !== action.payload
         ),
         loading: false,
       };
+
     case "FETCH_CLIENTES_FAILURE":
     case "ACTUALIZAR_CLIENTE_FAILURE":
     case "CREAR_CLIENTE_FAILURE":

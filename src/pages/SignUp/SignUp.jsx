@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from "axios";
+import { register } from "../../services/Services";
 import Swal from "sweetalert2";
 import "./SignUp.scss";
 
@@ -10,22 +10,18 @@ function Register() {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8000/api/registro/", {
-        username,
-        password,
-      });
+      await register(username, password);
       Swal.fire({
         title: "Usuario creado",
-        text: "Usuario registrado con exito",
+        text: "Usuario registrado con éxito",
         icon: "success",
         confirmButtonText: "Cerrar",
       });
-      // Redirige a la página de inicio de sesión o muestra un mensaje de éxito
     } catch (error) {
-      console.error("Error during registration:", error.response.data.error);
+      console.error("Error durante el registro:", error.error);
       Swal.fire({
         title: "¡Algo ha ocurrido!",
-        text: error.response.data.error,
+        text: error.error,
         icon: "error",
         confirmButtonText: "Cerrar",
       });

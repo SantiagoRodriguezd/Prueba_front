@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
-import axios from "axios";
+import { login } from "../../services/Services";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import "./SignIn.scss";
 
-function SignIn() {
+function SignIn({ onLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -12,22 +13,21 @@ function SignIn() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8000/api/login/", {
-        username,
-        password,
-      });
-      const { access_token, cliente, roles } = response.data;
+      const { access_token, cliente, roles } = await login(username, password);
 
       window.sessionStorage.setItem("access_token", access_token);
       window.sessionStorage.setItem("cliente", JSON.stringify(cliente));
       window.sessionStorage.setItem("roles", JSON.stringify(roles));
-
-      navigate("/home");
-      // Redirige a la página de inicio de sesión o muestra un mensaje de éxito
+      onLogin(access_token, roles);
+      if (roles.includes("Administrador")) {
+        navigate("/home");
+      } else if (roles.includes("Comprador")) {
+        navigate("/shop");
+      }
     } catch (error) {
       Swal.fire({
         title: "¡Algo ha ocurrido!",
-        text: error.response.data.error,
+        text: error.error,
         icon: "error",
         confirmButtonText: "Cerrar",
       });

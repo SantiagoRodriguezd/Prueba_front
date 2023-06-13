@@ -1,0 +1,15 @@
+.error-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .div-error{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .error-home{
+        color:#1928F2;
+        text-decoration: underline; 
+    }
+}
